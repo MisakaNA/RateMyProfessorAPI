@@ -85,11 +85,9 @@ class rmp:
             gethottag2 = re.findall(r'<span class=\"tag\-box\-choosetags\">[\s]+(.*?)[\s]+<b>(.*?)</b></span>', req)[1][0]
 
         except IndexError:
-            #logging.warning('消耗时间：%.2fs' % (time.time() - startTime))
             return '该教授信息暂不可用！'
 
         else:
-            #logging.warning('消耗时间：%.2fs' % (time.time() - startTime))
             return (
                 self.professorname +
                 '\n学院：' + getdepartment +
